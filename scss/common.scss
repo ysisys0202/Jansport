@@ -84,7 +84,8 @@ li {
 }
 /*layout*/
 .grid-width {
-  @include grid-width;
+  margin: 0 auto;
+  width: 1320px;
 }
 .content {
   @include content-layout;
@@ -98,6 +99,7 @@ li {
 /*global-header*/
 .global-header {
   position: relative;
+  top: 0;
   border-bottom: 1px solid $color-white;
   background-color: $color-white-clear;
   height: 80px;

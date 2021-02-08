@@ -97,6 +97,7 @@ li {
 /*global-header*/
 .global-header {
   position: relative;
+  top: 0;
   border-bottom: 1px solid #efefef;
   background-color: #ffffff;
   height: 80px;
@@ -162,17 +163,3 @@ li {
       transition: 0.5s; }
     .global-header .sub-nav-item span:hover::after {
       width: 100%; }
-
-/*main-slide*/
-.main-slide .slide-item {
-  height: 800px; }
-
-/*images*/
-.slide-item.i1 {
-  background-image: url(../images/index/main_slide_image_01.jpg); }
-
-.slide-item.i2 {
-  background-image: url(../images/index/main_slide_image_02.jpg); }
-
-.slide-item.i3 {
-  background-image: url(../images/index/main_slide_image_03.jpg); }
