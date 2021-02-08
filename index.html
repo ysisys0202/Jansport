@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/f20c69eb60.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script src="./js/swiper-slide.js" defer></script>
+    <title>잔스포츠</title>
+  </head>
+  <body>
+    <header class="global-header">
+      <h1 class="header-logo">
+        <img
+          src="./images/common/header-logo.png"
+          alt="잔스포츠"
+          class="header-iogo-img"
+        />
+      </h1>
+      <button class="mobile-nav-button" aria-label="모바일 네비게이션 버튼">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="global-nav">
+        <h2 class="sr-only">대메뉴</h2>
+        <ul class="main-nav">
+          <li class="main-nav-item dropdown-nav">
+            <a href="#">Shop</a>
+            <ul class="dropdown-nav-list">
+              <li class="dropdown-nav-item"><a href="#">ALL PROCUCTS</a></li>
+              <li class="dropdown-nav-item"><a href="#">SUPERBREAK</a></li>
+              <li class="dropdown-nav-item"><a href="#">BIC STUDENT</a></li>
+              <li class="dropdown-nav-item"><a href="#">HISTORY</a></li>
+              <li class="dropdown-nav-item"><a href="#">BIC CAMPUS</a></li>
+            </ul>
+          </li>
+          <li class="main-nav-item dropdown-nav">
+            <a href="#">Our Story</a>
+            <ul class="dropdown-nav-list">
+              <li class="dropdown-nav-item"><a href="#">히스토리</a></li>
+              <li class="dropdown-nav-item"><a href="#">지속가능성</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sub-nav">
+          <li class="sub-nav-item">
+            <a href="#"><i class="fas fa-search"></i><span>Search</span></a>
+          </li>
+          <li class="sub-nav-item">
+            <a href="#"><i class="fas fa-user-alt"></i><span>Login</span></a>
+          </li>
+          <li class="sub-nav-item">
+            <a href="#"
+              ><i class="fas fa-shopping-cart"></i><span>Cart(0)</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- /.global-header -->
+    <section class="main-slide swiper-container">
+      <h2 class="sr-only">메인 슬라이드</h2>
+      <ul class="slide-list swiper-wrapper">
+        <li class="slide-item image i1 swiper-slide">meet with west break</li>
+        <li class="slide-item image i2 swiper-slide">
+          good gear for good times
+        </li>
+        <li class="slide-item image i3 swiper-slide">mono chrome</li>
+      </ul>
+      <div class="button-group">
+        <button class="swiper-button-prev"></button>
+        <button class="swiper-button-next"></button>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+    <!-- /.main-slide -->
+    <section class="content collaboration">
+      <h2 class="content-title">
+        COLLABORATION
+        <span class="content-sub-title">잔스포츠 콜라보레이션</span>
+      </h2>
+      <div class="content-body">
+        <div class="article-wrapper">
+          <article class="bg bg-img01">
+            <div class="segment">
+              <h3 class="segment-title">잔스포츠 X 로라로라</h3>
+              <a href="#">더 보러가기</a>
+            </div>
+          </article>
+          <article class="bg bg-img02">
+            <div class="segment">
+              <h3 class="segment-title">잔스포츠 X 디즈니</h3>
+              <a href="#">더 보러가기</a>
+            </div>
+          </article>
+          <article class="bg bg-img03">
+            <div class="segment">
+              <h3 class="segment-title">잔스포츠 X 막스 곤잘레스</h3>
+              <a href="#">더 보러가기</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- /.content collaboration -->
+    <section class="content hot-item">
+      <h2 class="content-title">Hot Item</h2>
+      <div class="content-body content-slide swiper-container">
+        <ul class="content-slide-list swiper-wrapper">
+          <li class="content-slide-item swiper-slide">
+            <div class="img-wrapper">
+              <img
+                src="./images/bags/superbreak_grey_front.png"
+                alt="슈퍼브레이크 그레이"
+                class="product-img"
+              />
+            </div>
+            <div class="segment">
+              <h3 class="product-name">
+                슈퍼브레이크 그레이<span
+                  class="product-number"
+                  aria-label="상품번호"
+                  >T501-5L8</span
+                >
+              </h3>
+              <span class="product-prev-price">49,000원</span>
+              <span class="product-current-price">39,200원</span>
+            </div>
+          </li>
+          <li class="content-slide-item swiper-slide">
+            <div class="img-wrapper">
+              <img
+                src="./images/bags/superbreak_navy_front.png"
+                alt="슈퍼브레이크 네이비"
+                class="product-img"
+              />
+            </div>
+            <div class="segment">
+              <h3 class="product-name">
+                슈퍼브레이크 네이비
+                <span class="product-number" aria-label="상품번호">
+                  T501-003
+                </span>
+              </h3>
+              <span class="product-prev-price">49,000원</span>
+              <span class="product-current-price">39,200원</span>
+            </div>
+          </li>
+          <li class="content-slide-item swiper-slide">
+            <div class="img-wrapper">
+              <img
+                src="./images/bags/superbreak_russet_red_front.png"
+                alt="슈퍼브레이크 러싯레드"
+                class="product-img"
+              />
+            </div>
+            <div class="segment">
+              <h3 class="product-name">
+                슈퍼브레이크 러싯레드
+                <span class="product-number" aria-label="상품번호">
+                  T501-04S
+                </span>
+              </h3>
+              <span class="product-prev-price">49,000원</span>
+              <span class="product-current-price">39,200원</span>
+            </div>
+          </li>
+          <li class="content-slide-item swiper-slide">
+            <div class="img-wrapper">
+              <img
+                src="./images/bags/superbreak_red_tape_front.png"
+                alt="슈퍼브레이크 레드테이프"
+                class="product-img"
+              />
+            </div>
+            <div class="segment">
+              <h3 class="product-name">
+                슈퍼브레이크 레드테이프
+                <span class="product-number" aria-label="상품번호">
+                  T501-5XP
+                </span>
+              </h3>
+              <span class="product-prev-price">49,000원</span>
+              <span class="product-current-price">39,200원</span>
+            </div>
+          </li>
+          <li class="content-slide-item swiper-slide">
+            <div class="img-wrapper">
+              <img
+                src="./images/bags/superbreak_berry_mousse_front.png"
+                alt="슈퍼브레이크 베리무스"
+                class="product-img"
+              />
+            </div>
+            <div class="segment">
+              <h3 class="product-name">
+                슈퍼브레이크 베리무스
+                <span class="product-number" aria-label="상품번호">
+                  T501-5L8
+                </span>
+              </h3>
+              <span class="product-prev-price">49,000원</span>
+              <span class="product-current-price">39,200원</span>
+            </div>
+          </li>
+          <li class="content-slide-item swiper-slide">
+            <div class="img-wrapper">
+              <img
+                src="./images/bags/big_student_black_front.png"
+                alt="빅스튜던트 블랙"
+                class="product-img"
+              />
+            </div>
+            <div class="segment">
+              <h3 class="product-name">
+                빅스튜던트 블랙
+                <span class="product-number" aria-label="상품번호">
+                  47JK-008
+                </span>
+              </h3>
+              <span class="product-prev-price">89,000원</span>
+              <span class="product-current-price">66,300원</span>
+            </div>
+          </li>
+          <li class="content-slide-item swiper-slide">
+            <div class="img-wrapper">
+              <img
+                src="./images/bags/big_student_rainbow_bubble_front.png"
+                alt="빅스튜던트 레인보우버블"
+                class="product-img"
+              />
+            </div>
+            <div class="segment">
+              <h3 class="product-name">
+                빅스튜던트 레인보우버블
+                <span class="product-number" aria-label="상품번호">
+                  47JK-78K
+                </span>
+              </h3>
+              <span class="product-prev-price">89,000원</span>
+              <span class="product-current-price">66,300원</span>
+            </div>
+          </li>
+          <li class="content-slide-item swiper-slide">
+            <div class="img-wrapper">
+              <img
+                src="./images/bags/big_student_russet_red_front.png"
+                alt="빅스튜던트 러싯레드"
+                class="product-img"
+              />
+            </div>
+            <div class="segment">
+              <h3 class="product-name">
+                빅스튜던트 러싯레드
+                <span class="product-number" aria-label="상품번호">
+                  47JK-04S
+                </span>
+              </h3>
+              <span class="product-prev-price">89,000원</span>
+              <span class="product-current-price">66,300원</span>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </section>
+    <!-- /.content new-item -->
+    <section class="content video">
+      <h2 class="content-title sr-only">잔스포츠 비디오</h2>
+      <div class="content-body">
+        <div class="video-wrapper">
+          <iframe
+            class="jansport-video"
+            src="https://www.youtube.com/embed/QrWG7q4Epi8"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- /.cotent .video -->
+    <section class="banner">
+      <div class="banner-body bg">
+        <h2 class="banner-title">"FREEDOM IN LIFESTYLE AND EXPLORATION"</h2>
+        <p>
+          라이프 스타일의 생기를 불어넣어 줄 자유로운 감성은
+          <br />어떤 곳에서도 진가를 발휘합니다
+        </p>
+      </div>
+    </section>
+    <!-- /.banner -->
+    <section class="content explore-jansport">
+      <h2 class="content-title">EXPLORE JANSPORT</h2>
+      <div class="content-body">
+        <article>
+          <div class="img-wrapper">
+            <img
+              src="./images/index/explore_jansport_super_break.jpg"
+              alt="super break"
+              class="explore-img"
+            />
+          </div>
+          <h3 class="segment-title">SUPER BREAK</h3>
+        </article>
+        <article>
+          <div class="img-wrapper">
+            <img
+              src="./images/index/explore_jansport_super_break_mono.jpg"
+              alt="super break mono"
+              class="explore-img"
+            />
+          </div>
+          <h3 class="segment-title">SUPER BREAK MONO</h3>
+        </article>
+        <article>
+          <div class="img-wrapper">
+            <img
+              src="./images/index/explore_jansport_big_student.jpg"
+              alt="big student"
+              class="explore-img"
+            />
+          </div>
+          <h3 class="segment-title">BIG STUDENT</h3>
+        </article>
+        <article>
+          <div class="img-wrapper">
+            <img
+              src="./images/index/explore_jansport_big_campus.jpg"
+              alt="big campus"
+              class="explore-img"
+            />
+          </div>
+          <h3 class="segment-title">BIG CAMPUS</h3>
+        </article>
+        <article>
+          <div class="img-wrapper">
+            <img
+              src="./images/index/explore_jansport_right_pack.jpg"
+              alt="rightpack"
+              class="explore-img"
+            />
+          </div>
+          <h3 class="segment-title">RIGHT PACKK</h3>
+        </article>
+        <article>
+          <div class="img-wrapper">
+            <img
+              src="./images/index/explore_jansport_hatchet.jpg"
+              alt="hatchet"
+              class="explore-img"
+            />
+          </div>
+          <h3 class="segment-title">HATCHET</h3>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>

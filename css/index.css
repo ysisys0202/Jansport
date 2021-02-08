@@ -1,0 +1,179 @@
+.content-title {
+  margin-left: 40px; }
+
+/*main-slide*/
+.main-slide .slide-item {
+  height: 800px; }
+
+/*content*/
+/*collaboration*/
+.collaboration .content-body {
+  position: relative;
+  /* 400px / 1920px * 100 */
+  padding-bottom: 20.83%; }
+
+.collaboration .article-wrapper {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.collaboration article {
+  width: 33.333%;
+  overflow: hidden; }
+
+.collaboration .segment {
+  /*80px / 640px * 100*/
+  padding-top: 12.5%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #efefef;
+  text-align: center;
+  transform: translateY(100%);
+  transition: 0.5s; }
+
+.collaboration article:hover .segment {
+  transform: translateY(0); }
+
+.collaboration a {
+  display: block;
+  /*mt: 40px / 640px *100 */
+  margin: 6.25% auto 0;
+  width: 200px;
+  background-color: #4f98b0;
+  border-radius: 50px;
+  line-height: 50px; }
+
+/*hot-item*/
+.hot-item {
+  padding-bottom: 0; }
+  .hot-item .content-body {
+    position: relative;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef; }
+  .hot-item .content-slide-item {
+    padding: 20px 0 40px;
+    width: 25%;
+    border-right: 1px solid #efefef; }
+  .hot-item .img-wrapper {
+    width: 50%;
+    margin: 0 auto; }
+  .hot-item .product-img {
+    width: 100%;
+    height: auto; }
+  .hot-item .segment {
+    margin-top: 20px;
+    text-align: center; }
+  .hot-item .product-number {
+    font-weight: 700; }
+  .hot-item .product-prev-price,
+  .hot-item .product-current-price {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2.14; }
+  .hot-item .product-prev-price {
+    color: #77777a;
+    text-decoration: line-through; }
+  .hot-item .swiper-scrollbar {
+    position: absolute;
+    bottom: 0;
+    height: 5px; }
+
+/*.video*/
+.video {
+  padding: 40px 0; }
+  .video .content-body {
+    margin: 0; }
+  .video .video-wrapper {
+    position: relative;
+    /*1000px / 1920px * 100*/
+    padding-bottom: 52%; }
+  .video .video-wrapper .jansport-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/*banner*/
+.banner {
+  position: relative;
+  /*40px / 1920px * 100*/
+  margin: 0 2.08%;
+  /*440px / 1840px *100*/
+  padding-bottom: 23.91%; }
+  .banner .banner-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 120px / 1920px *100 */
+    padding-top: 6.25%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/index/banner_image.jpg);
+    background-attachment: fixed;
+    color: #efefef;
+    text-align: center; }
+  .banner .banner-title {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.667; }
+  .banner p {
+    /*40px / 1920px * 100*/
+    margin-top: 2.083%;
+    /*lh : 40px*/
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.67; }
+
+/*explore-jansport*/
+.explore-jansport .content-body {
+  display: flex;
+  justify-content: space-around; }
+
+.explore-jansport article {
+  width: calc(16.6667% - 40px);
+  cursor: pointer; }
+
+.explore-jansport .img-wrapper {
+  position: relative;
+  padding-bottom: 100%;
+  border-radius: 140px;
+  overflow: hidden; }
+
+.explore-jansport .explore-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: 0.5s; }
+
+.explore-jansport article:hover .explore-img {
+  transform: scale(1.05); }
+
+.explore-jansport .segment-title {
+  font-weight: 700;
+  text-align: center; }
+
+/*images*/
+.slide-item.i1 {
+  background-image: url(../images/index/main_slide_image_01.jpg); }
+
+.slide-item.i2 {
+  background-image: url(../images/index/main_slide_image_02.jpg); }
+
+.slide-item.i3 {
+  background-image: url(../images/index/main_slide_image_03.jpg); }
+
+.collaboration .bg-img01 {
+  background-image: url(../images/index/collaboration_rolarola.jpg); }
+
+.collaboration .bg-img02 {
+  background-image: url(../images/index/collaboration_diseney.jpg); }
+
+.collaboration .bg-img03 {
+  background-image: url(../images/index/collaboration_mark_gonzaless.jpg); }
