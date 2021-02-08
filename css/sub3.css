@@ -1,0 +1,62 @@
+.content-title {
+  display: block;
+  text-align: center; }
+
+.button {
+  width: 180px;
+  height: 50px;
+  background-color: #4f98b0;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.22;
+  color: #efefef; }
+
+/*login*/
+.login {
+  padding-bottom: 0; }
+  .login .login-form {
+    margin: 0 auto;
+    padding-bottom: 80px;
+    width: 620px;
+    border-bottom: 1px solid #4f98b0; }
+  .login .form-group {
+    display: flex;
+    justify-content: space-between; }
+  .login input {
+    width: 400px;
+    height: 50px;
+    padding: 20px;
+    border: 1px solid #efefef;
+    border-radius: 10px; }
+  .login input::placeholder {
+    font-size: 16px; }
+  .login .checkbox-wrapper {
+    display: flex;
+    align-items: center; }
+  .login .id-save-checkbox {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px; }
+  .login .id-save-label {
+    color: #77777a; }
+  .login .password {
+    margin-top: 10px; }
+
+.sign-up {
+  padding-top: 0; }
+  .sign-up .content-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; }
+  .sign-up p {
+    margin-right: 40px;
+    color: #77777a; }
+  .sign-up a {
+    text-align: center;
+    line-height: 50px;
+    font-weight: 400;
+    color: #232323;
+    background-color: #efefef; }
