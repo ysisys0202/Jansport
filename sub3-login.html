@@ -7,25 +7,99 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/sub3.css" />
+    <script
+      src="https://kit.fontawesome.com/f20c69eb60.js"
+      crossorigin="anonymous"
+    ></script>
     <title>로그인 | 잔스포츠</title>
   </head>
   <body>
+    <header class="global-header">
+      <h1 class="header-logo">
+        <a href="./index.html"
+          ><img
+            src="./images/common/header-logo.png"
+            alt="잔스포츠"
+            class="header-iogo-img"
+        /></a>
+      </h1>
+      <button class="mobile-nav-button" aria-label="모바일 네비게이션 버튼">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="global-nav">
+        <h2 class="sr-only">대메뉴</h2>
+        <ul class="main-nav">
+          <li class="main-nav-item dropdown-nav">
+            <a href="./sub1-product-page.html">Shop</a>
+            <ul class="dropdown-nav-list">
+              <li class="dropdown-nav-item"><a href="#">ALL PROCUCTS</a></li>
+              <li class="dropdown-nav-item"><a href="#">SUPERBREAK</a></li>
+              <li class="dropdown-nav-item"><a href="#">BIC STUDENT</a></li>
+              <li class="dropdown-nav-item"><a href="#">HISTORY</a></li>
+              <li class="dropdown-nav-item"><a href="#">BIC CAMPUS</a></li>
+            </ul>
+          </li>
+          <li class="main-nav-item dropdown-nav">
+            <a href="#">Our Story</a>
+            <ul class="dropdown-nav-list">
+              <li class="dropdown-nav-item"><a href="#">히스토리</a></li>
+              <li class="dropdown-nav-item"><a href="#">지속가능성</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sub-nav">
+          <li class="sub-nav-item">
+            <a href="#"><i class="fas fa-search"></i><span>Search</span></a>
+          </li>
+          <li class="sub-nav-item">
+            <a href="./sub3-login.html"
+              ><i class="fas fa-user-alt"></i><span>Login</span></a
+            >
+          </li>
+          <li class="sub-nav-item">
+            <a href="#"
+              ><i class="fas fa-shopping-cart"></i><span>Cart(0)</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- /.global-header -->
+    <section class="page-pagination">
+      <h2 class="page-route" aria-label="페이지 경로">
+        <span class="root-page" aria-label="상위 페이지">
+          <a href="./index.html">Home</a>
+        </span>
+        <span class="current-page" aria-label="현재 페이지">
+          <a href="./sub3-login.html">Login</a>
+        </span>
+      </h2>
+    </section>
+    <!-- /.pagination -->
     <section class="content login">
       <h2 class="content-title">로그인</h2>
       <div class="content-body grid-width">
         <form action="#" method="GET" class="login-form">
           <div class="form-group id">
-            <input type="text" placeholder="아이디" />
+            <input type="text" placeholder="아이디" required />
             <div class="checkbox-wrapper">
-              <input class="id-save-checkbox" id="idSave" type="checkbox" />
-              <label class="id-save-label" value="save" for="idSave">
-                아이디 저장
-              </label>
+              <input
+                class="id-save-checkbox"
+                value="save"
+                id="idSave"
+                type="checkbox"
+              />
+              <label class="id-save-label" for="idSave"> 아이디 저장 </label>
             </div>
             <!-- .id-form -->
           </div>
           <div class="form-group password">
-            <input type="password" placeholder="비밀번호" />
+            <input
+              type="password"
+              placeholder="비밀번호"
+              minlength="8"
+              required
+            />
             <button class="button" type="submit">로그인</button>
           </div>
         </form>
@@ -38,5 +112,154 @@
         <a class="button" href="#">회원가입</a>
       </div>
     </section>
+    <footer class="global-footer">
+      <div class="footer-body grid-width">
+        <div class="row row-1">
+          <div class="column col-1">
+            <section class="footer-menu find-on-us">
+              <h2 class="footer-menu-title">FIND ON US</h2>
+              <div class="footer-menu-body">
+                <ul class="sns-list">
+                  <li class="sns-item">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#"><i class="fab fa-tumblr"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- /.find-on-us -->
+          </div>
+          <!-- col-1 -->
+          <!-- column -->
+          <div class="column col-2">
+            <section class="footer-menu customer-service">
+              <h2 class="footer-menu-title">CUSTOMER SERVICE</h2>
+              <div class="footer-menu-body">
+                <ul class="footer-menu-list">
+                  <li class="footer-menu-item"><a href="#">RETURNES</a></li>
+                  <li class="footer-menu-item"><a href="#">DELIVERY</a></li>
+                  <li class="footer-menu-item"><a href="#">FAQS</a></li>
+                  <li class="footer-menu-item">
+                    <a href="#">TRCK YOUR ORDER</a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="footer-menu discover-more">
+              <h2 class="footer-menu-title">DISCOVR MORE</h2>
+              <div class="footer-menu-body">
+                <ul class="footer-menu-list">
+                  <li class="footer-menu-item">
+                    <a href="#">COMPANU HISTORY</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a href="#">SUSTAINABLITY</a>
+                  </li>
+                  <li class="footer-menu-item"><a href="#">PRIVACY</a></li>
+                  <li class="footer-menu-item">
+                    <a href="#">TERMS CONDITIONS</a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <!-- /.col-2 -->
+        </div>
+        <!-- /.row-1 -->
+        <div class="row row-2">
+          <section class="footer-menu company-info">
+            <h2 class="footer-menu-title">JAN SPORT KOREA</h2>
+            <div class="footer-menu-body">
+              <dl class="company-info-list head-company-info">
+                <div class="company-info-wrapper">
+                  <dt>COMPANY NAME</dt>
+                  <dd>주식회사 아이콘서플라이컴퍼니</dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>REPRESENTATION</dt>
+                  <dd>최성환</dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>ADRESS</dt>
+                  <dd>
+                    서울시 강남구 신사동 644-22 5층 아이콘서플라이
+                    [반송지주소아님]
+                  </dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>BUSINESS REGISTRATION NUMBER</dt>
+                  <dd>261-81-17691 [사업자정보확인]</dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>COMMUNICATION SALES REPORT</dt>
+                  <dd>제2014-서울강남-03400</dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>HOSTING</dt>
+                  <dd>심플렉스인터넷(주)</dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>PERSONAL INFORMATION MANAGER</dt>
+                  <dd>최성환 (customer@iconsupply.co.kr)</dd>
+                </div>
+              </dl>
+              <!-- /.head-company -->
+              <dl class="company-info-list consignment-company-info">
+                <div class="company-info-wrapper">
+                  <dt>COMPANY NAME</dt>
+                  <dd>(주)이누인터내셔날</dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>REPRESENTATION</dt>
+                  <dd>최인우</dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>ADRESS</dt>
+                  <dd>
+                    서울시 강남구 선릉로 667 라이즈스퀘어 7F/6F [반송지주소아님]
+                  </dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>BUSINESS REGISTRATION NUMBER</dt>
+                  <dd>211-88-37444 [사업자정보확인]</dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>COMMUNICATION SALES REPORT</dt>
+                  <dd>2020-서울강남-03120</dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>MAIN PHONE</dt>
+                  <dd>1599-5012</dd>
+                </div>
+                <div class="company-info-wrapper">
+                  <dt>FAX</dt>
+                  <dd>02-548-7422</dd>
+                </div>
+              </dl>
+            </div>
+          </section>
+          <!--/.company-info -->
+        </div>
+        <!-- /.row-2 -->
+        <div class="row row-3">
+          <p>© Jansport All rights reserved</p>
+        </div>
+      </div>
+      <!-- /.row-3 -->
+    </footer>
   </body>
 </html>
