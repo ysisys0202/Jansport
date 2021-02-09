@@ -53,13 +53,3 @@ $color-grey-05: #ebebeb;
   font-weight: $fw;
   line-height: $lh;
 }
-
-//layout
-@mixin content-layout($padding: 160px 0) {
-  padding: $padding;
-}
-@mixin grid-width {
-  margin: 0 auto;
-
-  width: 1320px;
-}
