@@ -1,0 +1,222 @@
+@import "./variable.scss";
+.content {
+  .content-body {
+    margin-top: 80px;
+  }
+}
+.content-title {
+  justify-content: center;
+}
+/*banner*/
+.banner {
+  position: relative;
+  /*360px / 1920px * 100*/
+  padding-bottom: 18.75%;
+  .banner-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/sub1/images/banner-all-product_01.jpg);
+  }
+  .banner-title {
+    font-size: 7.2rem;
+    font-weight: 700;
+    color: $color-white;
+    /*lh:120px*/
+    line-height: 1.667;
+  }
+}
+/*style-select*/
+.style-select {
+  .style-select-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  .style-selcet-item {
+    position: relative;
+    overflow: hidden;
+    width: calc(33.333% - 40px);
+    //border-radius: 10px 10px 0 0;
+    background-color: $color-brand;
+    font-size: 1.8rem;
+    color: $color-white;
+    text-align: center;
+    line-height: 60px;
+    transition: 0.5s;
+  }
+  .style-selcet-item:hover {
+    overflow: visible;
+  }
+  .selcet-icon {
+    display: inline-block;
+    margin-left: 10px;
+    transition: 0.5s;
+  }
+  .style-selcet-item:hover .selcet-icon {
+    transform: rotate(45deg);
+  }
+  .subclass-list {
+    position: absolute;
+    padding: 30px 30px 29px;
+    width: 100%;
+    border: 1px solid $color-white;
+    border-top: none;
+    background-color: $color-white-clear;
+    color: $color-grey-01;
+    text-align: left;
+    @include font-sm($fw: 400);
+  }
+  .all {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  .size-item:not(.all)::before,
+  .print-item:not(.all)::before {
+    content: "-";
+  }
+  .size-item > a,
+  .print-item > a {
+    position: relative;
+  }
+  .size-item > a::after,
+  .print-item > a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $color-grey-01;
+    transition: 0.5s;
+  }
+  .size-item:hover > a::after,
+  .print-item:hover > a::after {
+    width: 100%;
+  }
+  .color-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 23px 0;
+  }
+  .color-item {
+    margin: 7px 7px 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    &:hover {
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    a {
+      display: block;
+      text-indent: -9999px;
+    }
+    &.all {
+      border: 1px solid $color-white;
+      font-size: 1.2rem;
+      text-align: center;
+      /*lh:30px*/
+      line-height: 2.5;
+      a {
+        text-indent: 0;
+      }
+    }
+    &.black {
+      background-color: #000000;
+    }
+    &.blue {
+      background-color: #0000ff;
+    }
+    &.green {
+      background-color: #009900;
+    }
+    &.purple {
+      background-color: #6600cc;
+    }
+    &.red {
+      background-color: #ff0000;
+    }
+    &.orange {
+      background-color: #ff6600;
+    }
+    &.pink {
+      background-color: #ffb6c1;
+    }
+    &.yellow {
+      background-color: #ffcc00;
+    }
+    &.grey {
+      background-color: #999999;
+    }
+    &.white {
+      border: 1px solid $color-white;
+    }
+  }
+}
+/*product*/
+.product {
+  .product-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .product-item {
+    width: calc(33.333% - 40px);
+    cursor: pointer;
+  }
+  .product-item:nth-child(3) ~ .product-item {
+    margin-top: 40px;
+  }
+  .img-wrapper {
+    margin: 0 auto;
+    width: 95%;
+  }
+  .product-img {
+    width: 100%;
+    height: auto;
+  }
+  .segment {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .segment-title {
+    @include font-md;
+  }
+  .product-prev-price,
+  .product-current-price {
+    display: block;
+  }
+  .product-prev-price {
+    margin-top: 5px;
+    color: $color-grey-01;
+    text-decoration: line-through;
+  }
+  .pagination {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto 0;
+    width: 150px;
+  }
+  .pagination-item {
+    width: 40px;
+    height: 40px;
+    background-color: $color-white;
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: center;
+    transition: 0.5s;
+  }
+  .pagination-item:hover {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: $color-brand;
+  }
+  .pagination-item.active {
+    background-color: $color-brand;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: $color-white;
+  }
+}
