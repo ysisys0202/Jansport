@@ -11,18 +11,18 @@
       src="https://kit.fontawesome.com/f20c69eb60.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/sub1/dropdown.js" defer></script>
+    <script src="./js/sub1/product-img-change.js" defer></script>
     <title>모든 상품 보기 | 잔스포츠</title>
   </head>
   <body>
     <header class="global-header">
       <h1 class="header-logo">
-        <a href="./index.html">
-          <img
-            src="./images/common/header-logo.png"
-            alt="잔스포츠"
-            class="header-iogo-img"
-          />
-        </a>
+        <img
+          src="./images/common/header-logo.png"
+          alt="잔스포츠"
+          class="header-iogo-img"
+        />
       </h1>
       <button class="mobile-nav-button" aria-label="모바일 네비게이션 버튼">
         <i class="fas fa-bars"></i>
@@ -50,13 +50,12 @@
         </ul>
         <ul class="sub-nav">
           <li class="sub-nav-item search-item">
-            <button type="button" class="search-button">
-              <i class="fas fa-search"></i><span>Search</span>
-            </button>
             <form class="search-form" action="#" method="GET">
-              <input class="search-input" type="text" />
+              <div class="serach-input-wrapper">
+                <input class="search-input" type="text" />
+              </div>
               <button type="submit" class="search-submit-button">
-                <i class="far fa-hand-pointer"></i>
+                <i class="fas fa-search"></i>
               </button>
             </form>
           </li>
@@ -72,6 +71,7 @@
           </li>
         </ul>
       </nav>
+      <div class="nav-overlay"></div>
     </header>
     <!-- /.global-header -->
     <section class="banner">
@@ -90,7 +90,7 @@
         </span>
       </h2>
     </section>
-    <!-- /.pagination -->
+    <!-- /.page-pagination -->
     <section class="content style-select">
       <h2 class="content-title">
         SELECT YOUR STYLE
@@ -98,82 +98,90 @@
       </h2>
       <div class="content-body grid-width">
         <ul class="style-select-list">
-          <li class="style-selcet-item">
+          <li class="style-select-item">
             SELECT SIZE
-            <span class="selcet-icon"><i class="fas fa-plus"></i></span>
-            <ul class="subclass-list size-list">
-              <li class="subclass-item size-item all"><a href="#">ALL</a></li>
-              <li class="subclass-item size-item">
-                <a href="#">SMALL SIZE</a>
-              </li>
-              <li class="subclass-item size-item">
-                <a href="#">MEDIUM SIZE</a>
-              </li>
-              <li class="subclass-item size-item">
-                <a href="#">LARGE SIZE</a>
-              </li>
-              <li class="subclass-item size-item">
-                <a href="#">X LARGE SIZE</a>
-              </li>
-            </ul>
+            <span class="select-icon"><i class="fas fa-plus"></i></span>
+            <div class="subclass-wrapper">
+              <ul class="subclass-list size-list">
+                <li class="subclass-item size-item all"><a href="#">ALL</a></li>
+                <li class="subclass-item size-item">
+                  <a href="#">SMALL SIZE</a>
+                </li>
+                <li class="subclass-item size-item">
+                  <a href="#">MEDIUM SIZE</a>
+                </li>
+                <li class="subclass-item size-item">
+                  <a href="#">LARGE SIZE</a>
+                </li>
+                <li class="subclass-item size-item">
+                  <a href="#">X LARGE SIZE</a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="style-selcet-item">
+          <li class="style-select-item">
             SELECT SIZE
-            <span class="selcet-icon"><i class="fas fa-plus"></i></span>
-            <ul class="subclass-list color-list">
-              <li class="subclass-item color-item all">
-                <a href="#">ALL</a>
-              </li>
-              <li class="subclass-item color-item black">
-                <a href="#">black</a>
-              </li>
-              <li class="subclass-item color-item blue">
-                <a href="#">blue</a>
-              </li>
-              <li class="subclass-item color-item green">
-                <a href="#">green</a>
-              </li>
-              <li class="subclass-item color-item purple">
-                <a href="#">purple</a>
-              </li>
-              <li class="subclass-item color-item red">
-                <a href="#">red</a>
-              </li>
-              <li class="subclass-item color-item orange">
-                <a href="#">orange</a>
-              </li>
-              <li class="subclass-item color-item pink">
-                <a href="#">pink</a>
-              </li>
-              <li class="subclass-item color-item yellow">
-                <a href="#">yellow</a>
-              </li>
-              <li class="subclass-item color-item grey">
-                <a href="#">grey</a>
-              </li>
-              <li class="subclass-item color-item white">
-                <a href="#">white</a>
-              </li>
-            </ul>
+            <span class="select-icon"><i class="fas fa-plus"></i></span>
+            <div class="subclass-wrapper">
+              <ul class="subclass-list color-list">
+                <li class="subclass-item color-item all">
+                  <a href="#">ALL</a>
+                </li>
+                <li class="subclass-item color-item black">
+                  <a href="#">black</a>
+                </li>
+                <li class="subclass-item color-item blue">
+                  <a href="#">blue</a>
+                </li>
+                <li class="subclass-item color-item green">
+                  <a href="#">green</a>
+                </li>
+                <li class="subclass-item color-item purple">
+                  <a href="#">purple</a>
+                </li>
+                <li class="subclass-item color-item red">
+                  <a href="#">red</a>
+                </li>
+                <li class="subclass-item color-item orange">
+                  <a href="#">orange</a>
+                </li>
+                <li class="subclass-item color-item pink">
+                  <a href="#">pink</a>
+                </li>
+                <li class="subclass-item color-item yellow">
+                  <a href="#">yellow</a>
+                </li>
+                <li class="subclass-item color-item grey">
+                  <a href="#">grey</a>
+                </li>
+                <li class="subclass-item color-item white">
+                  <a href="#">white</a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="style-selcet-item">
+          <li class="style-select-item">
             SELECT PRINT
-            <span class="selcet-icon"><i class="fas fa-plus"></i></span>
-            <ul class="subclass-list print-list">
-              <li class="subclass-item print-item all"><a href="#">ALL</a></li>
-              <li class="subclass-item print-item">
-                <a href="#">레오파드(leopard)</a>
-              </li>
-              <li class="subclass-item print-item">
-                <a href="#">리본(ribbon)</a>
-              </li>
-              <li class="subclass-item print-item">
-                <a href="#">꽃(flower)</a>
-              </li>
-              <li class="subclass-item print-item">
-                <a href="#">단색(solid)</a>
-              </li>
-            </ul>
+            <span class="select-icon"><i class="fas fa-plus"></i></span>
+            <div class="subclass-wrapper">
+              <ul class="subclass-list print-list">
+                <li class="subclass-item print-item all">
+                  <a href="#">ALL</a>
+                </li>
+                <li class="subclass-item print-item">
+                  <a href="#">레오파드(leopard)</a>
+                </li>
+                <li class="subclass-item print-item">
+                  <a href="#">리본(ribbon)</a>
+                </li>
+                <li class="subclass-item print-item">
+                  <a href="#">꽃(flower)</a>
+                </li>
+                <li class="subclass-item print-item">
+                  <a href="#">단색(solid)</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>

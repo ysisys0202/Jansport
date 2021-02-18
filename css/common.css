@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*font*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
 html {
@@ -5,48 +6,41 @@ html {
 
 body {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 400;
   line-height: 30px;
   color: #232323; }
 
 .content-title {
-  display: flex;
-  align-items: center;
+  /*40px / 1920px * 100*/
+  margin-left: 2.08%;
   font-size: 3.6rem;
   font-weight: 900;
   line-height: 2.22; }
 
 .content-sub-title {
+  display: inline-block;
   position: relative;
-  margin-left: 45px;
-  /*lh:80px*/
-  font-size: 2.4rem;
+  margin: 2px 0 0 25px;
+  vertical-align: top;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 3.33; }
+  line-height: 4.44; }
   .content-sub-title::before {
     content: "";
     display: inline-block;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -25px;
-    margin: auto;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
     width: 5px;
-    height: 28px;
+    height: 30px;
     background-color: #4f98b0; }
 
 .segment-title {
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 3.33; }
-
-/*animation*/
-@keyframes upAndDown {
-  0% {
-    transform: translateY(50%); }
-  100% {
-    transform: translateY(0); } }
 
 /*sr-only*/
 .sr-only {
@@ -83,12 +77,16 @@ li {
   cursor: pointer; }
 
 /*layout*/
+body {
+  padding-top: 80px; }
+
 .grid-width {
   margin: 0 auto;
   width: 1320px; }
 
 .content {
-  padding: 160px 0; }
+  /*160px / 1920px * 100*/
+  padding: 8.33% 0; }
   .content .content-header {
     text-align: center; }
   .content .content-body {
@@ -96,24 +94,37 @@ li {
 
 /*global-header*/
 .global-header {
-  position: relative;
+  position: fixed;
   top: 0;
+  z-index: 9000;
   border-bottom: 1px solid #efefef;
   background-color: #ffffff;
-  height: 80px;
-  overflow: hidden; }
+  width: 100%;
+  height: 80px; }
   .global-header .header-logo {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    cursor: pointer; }
   .global-header .mobile-nav-button {
     display: none;
     font-size: 30px;
+    color: #77777a;
     line-height: 80px; }
   .global-header .global-nav {
     display: flex;
     justify-content: space-between; }
+  .global-header .nav-overlay {
+    position: absolute;
+    top: calc(100% + 1px);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 0.5s; }
+    .global-header .nav-overlay.active {
+      height: 190px; }
   .global-header .main-nav {
     display: flex; }
   .global-header .main-nav-item {
@@ -128,22 +139,35 @@ li {
     line-height: 80px;
     text-align: center; }
   .global-header .main-nav-item:hover > a {
-    color: #efefef; }
+    color: #ffffff; }
   .global-header .dropdown-nav-list {
     position: absolute;
-    padding: 15px 0 0 20px;
+    top: calc(100% + 1px);
+    left: 0;
+    z-index: 10;
     overflow: hidden;
+    height: 0;
     width: calc(100% + 1px);
-    border-right: 1px solid #efefef; }
+    transition: 0.5s; }
+    .global-header .dropdown-nav-list.active {
+      height: 190px; }
+  .global-header .dropdown-nav-item:first-of-type {
+    padding-top: 15px; }
+  .global-header .dropdown-nav-item {
+    padding-left: 20px; }
   .global-header .dropdown-nav-item > a {
     font-size: 14px;
     color: #77777a;
     line-height: 1.875; }
+  .global-header .dropdown-nav-item:hover > a {
+    font-weight: 500;
+    color: #232323; }
   .global-header .sub-nav {
     display: flex; }
   .global-header .sub-nav-item {
     margin-right: 30px; }
   .global-header .sub-nav-item > a {
+    display: block;
     font-size: 14px;
     color: #77777a;
     line-height: 80px; }
@@ -155,6 +179,7 @@ li {
       position: absolute;
       left: 0;
       right: 0;
+      z-index: 15;
       bottom: -5px;
       margin: auto;
       width: 0;
@@ -163,3 +188,168 @@ li {
       transition: 0.5s; }
     .global-header .sub-nav-item span:hover::after {
       width: 100%; }
+  .global-header .search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    border-right: 1px solid #efefef;
+    border-left: 1px solid #efefef;
+    transition: 0.5s; }
+  .global-header .search-form:hover {
+    width: 300px; }
+  .global-header .serach-input-wrapper {
+    overflow: hidden;
+    width: 0; }
+  .global-header .search-form:hover .serach-input-wrapper {
+    width: 200px; }
+  .global-header .search-input {
+    padding: 20px;
+    width: 0;
+    height: 40px;
+    border: 1px solid #efefef;
+    border-radius: 20px; }
+  .global-header .search-form:hover .search-input {
+    width: 200px; }
+  .global-header .search-submit-button {
+    width: 80px;
+    color: #77777a;
+    font-size: 14px; }
+  .global-header .mobile-nav {
+    position: fixed;
+    top: 80px;
+    z-index: 20;
+    padding: 30px;
+    width: 90%;
+    background-color: #fff; }
+
+/*page-pagination*/
+.page-pagination {
+  padding: 20px 0 20px 40px; }
+  .page-pagination .current-page::before {
+    content: ">";
+    margin: 0 5px; }
+
+/*global-footer*/
+.global-footer {
+  /*
+  pt,pb:120px / 1920px *100
+  pr,pl:20px / 1920px * 100
+  */
+  padding: 6.25% 1.04%;
+  background-color: #80a2ad;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2.14;
+  color: #efefef;
+  /*find-on-us*/
+  /*discover-more*/
+  /*company info*/ }
+  .global-footer .footer-menu-body {
+    margin-top: 20px; }
+  .global-footer .footer-menu-title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.22; }
+  .global-footer .row:first-of-type ~ .row {
+    margin-top: 40px; }
+  .global-footer .row-1 {
+    display: flex;
+    justify-content: space-between; }
+  .global-footer .row-3 {
+    text-align: center; }
+  .global-footer .col-2 {
+    display: flex;
+    justify-content: space-around; }
+  .global-footer .find-on-us .sns-list {
+    display: flex; }
+  .global-footer .find-on-us .sns-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #4f98b0;
+    border-radius: 15px;
+    color: #efefef;
+    margin-right: 15px; }
+  .global-footer .discover-more {
+    margin-left: 40px; }
+  .global-footer .company-info {
+    margin-top: 40px; }
+    .global-footer .company-info .company-info-list {
+      display: flex;
+      flex-wrap: wrap; }
+      .global-footer .company-info .company-info-list:first-of-type ~ .company-info-list {
+        margin-top: 20px; }
+    .global-footer .company-info .company-info-wrapper {
+      display: flex; }
+      .global-footer .company-info .company-info-wrapper::after {
+        content: "/";
+        margin: 0 10px; }
+      .global-footer .company-info .company-info-wrapper dt::after {
+        content: ":";
+        margin: 0 5px; }
+
+/*media queries*/
+/*1320px 이하*/
+@media screen and (max-width: 1320px) {
+  /*layout*/
+  .content {
+    /*160px / 1320px * 100*/
+    padding: 12.12% 0; }
+    .content .content-header {
+      text-align: center; }
+  .grid-width {
+    width: 95%; } }
+
+/*1024px 이하*/
+@media screen and (max-width: 1024px) {
+  /*layout*/
+  .content {
+    /*160px / 1024px * 100*/
+    padding: 15.63% 0; }
+    .content .content-header {
+      text-align: center; }
+  /*global-header*/
+  .global-header .mobile-nav-button {
+    display: block; }
+  .global-header .main-nav {
+    display: none; }
+  .global-header .active .dropdown-nav-list {
+    height: 100%; }
+  .global-header .sub-nav {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .global-header .sub-nav-item span {
+    display: none; } }
+
+/*768px 이하*/
+@media screen and (max-width: 768px) {
+  /*font*/
+  .content-title {
+    font-size: 3.4rem; }
+  .content-sub-title {
+    display: block;
+    position: static;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.22; }
+    .content-sub-title::before {
+      content: "";
+      display: block;
+      position: static;
+      transform: translateY(0);
+      margin-bottom: 10px;
+      width: 30px;
+      height: 5px; }
+  /*layout*/
+  .content {
+    /*160px / 1320px * 100*/
+    padding: 20.83% 0; }
+    .content .content-header {
+      text-align: center; } }

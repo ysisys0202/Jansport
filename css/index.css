@@ -1,6 +1,4 @@
-.content-title {
-  margin-left: 40px; }
-
+@charset "UTF-8";
 /*main-slide*/
 .main-slide .slide-item {
   height: 800px; }
@@ -45,6 +43,9 @@
   background-color: #4f98b0;
   border-radius: 50px;
   line-height: 50px; }
+
+.collaboration .swiper-scrollbar {
+  display: none; }
 
 /*hot-item*/
 .hot-item {
@@ -141,7 +142,7 @@
 .explore-jansport .img-wrapper {
   position: relative;
   padding-bottom: 100%;
-  border-radius: 140px;
+  border-radius: 50%;
   overflow: hidden; }
 
 .explore-jansport .explore-img {
@@ -156,8 +157,47 @@
   transform: scale(1.05); }
 
 .explore-jansport .segment-title {
-  font-weight: 700;
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.22;
   text-align: center; }
+
+/*media queries*/
+@media screen and (max-width: 1024px) {
+  /*main-slide*/
+  /*.collaborattion*/
+  .collaboration .content-body {
+    padding-bottom: 62.5%; }
+  .collaboration .segment {
+    /*150px 1024px *100*/
+    padding-top: 14.65%; }
+  .collaboration .swiper-scrollbar {
+    display: block;
+    position: absolute;
+    bottom: 0; }
+  /*.banner*/
+  .banner {
+    /*510px / 973px * 100*/
+    padding-bottom: 52.41%; }
+  /*.explore-jansport*/
+  .explore-jansport .content-body {
+    justify-content: space-around;
+    flex-wrap: wrap; }
+  .explore-jansport article {
+    width: calc(33.333% - 15px); }
+    .explore-jansport article:nth-of-type(3) ~ article {
+      margin-top: 40px; } }
+
+/*768px 이하*/
+@media screen and (max-width: 768px) {
+  .banner {
+    padding-bottom: 93.75%; }
+  /*.explore-jansport*/
+  .explore-jansport article {
+    width: calc(50% - 15px); }
+    .explore-jansport article:nth-of-type(2) ~ article {
+      margin-top: 40px; } }
 
 /*images*/
 .slide-item.i1 {

@@ -16,6 +16,9 @@
     ></script>
     <script src="./js/swiper-bundle.min.js" defer></script>
     <script src="./js/swiper-slide.js" defer></script>
+    <script src="./js/sub1/nav-dropdown.js" defer></script>
+    <script src="./js/sub1/mobile-nav-tap.js" defer></script>
+    <script src="./js/index/video-auto-play.js" defer></script>
     <title>잔스포츠</title>
   </head>
   <body>
@@ -52,8 +55,15 @@
           </li>
         </ul>
         <ul class="sub-nav">
-          <li class="sub-nav-item">
-            <a href="#"><i class="fas fa-search"></i><span>Search</span></a>
+          <li class="sub-nav-item search-item">
+            <form class="search-form" action="#" method="GET">
+              <div class="serach-input-wrapper">
+                <input class="search-input" type="text" />
+              </div>
+              <button type="submit" class="search-submit-button">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
           </li>
           <li class="sub-nav-item">
             <a href="./sub3-login.html"
@@ -67,6 +77,29 @@
           </li>
         </ul>
       </nav>
+      <nav class="mobile-nav">
+        <h2 class="sr-only">모바일 네비게이션</h2>
+        <ul class="mobile-nav-list">
+          <li class="mobile-nav-item">
+            <a href="./sub1-product-page.html">Shop</a>
+            <ul class="subclass-nav">
+              <li class="subclass-nav-item"><a href="#">ALL PROCUCTS</a></li>
+              <li class="subclass-nav-item"><a href="#">SUPERBREAK</a></li>
+              <li class="subclass-nav-item"><a href="#">BIC STUDENT</a></li>
+              <li class="subclass-nav-item"><a href="#">HISTORY</a></li>
+              <li class="subclass-nav-item"><a href="#">BIC CAMPUS</a></li>
+            </ul>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="#">Our Story</a>
+            <ul class="subclass-nav">
+              <li class="subclass-nav-item"><a href="#">히스토리</a></li>
+              <li class="subclass-nav-item"><a href="#">지속가능성</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-overlay"></div>
     </header>
     <!-- /.global-header -->
     <section class="main-slide swiper-container">
@@ -90,36 +123,37 @@
         COLLABORATION
         <span class="content-sub-title">잔스포츠 콜라보레이션</span>
       </h2>
-      <div class="content-body">
-        <div class="article-wrapper">
-          <article class="bg bg-img01">
+      <div class="content-body content-slide1 swiper-container">
+        <div class="article-wrapper swiper-wrapper">
+          <article class="bg bg-img01 swiper-slide">
             <div class="segment">
               <h3 class="segment-title">잔스포츠 X 로라로라</h3>
               <a href="#">더 보러가기</a>
             </div>
           </article>
-          <article class="bg bg-img02">
+          <article class="bg bg-img02 swiper-slide">
             <div class="segment">
               <h3 class="segment-title">잔스포츠 X 디즈니</h3>
               <a href="#">더 보러가기</a>
             </div>
           </article>
-          <article class="bg bg-img03">
+          <article class="bg bg-img03 swiper-slide">
             <div class="segment">
               <h3 class="segment-title">잔스포츠 X 막스 곤잘레스</h3>
               <a href="#">더 보러가기</a>
             </div>
           </article>
         </div>
+        <div class="swiper-scrollbar"></div>
       </div>
     </section>
     <!-- /.content collaboration -->
     <section class="content hot-item">
       <h2 class="content-title">
-        Hot Item
+        HOT ITEM
         <span class="content-sub-title">잔스포츠 인기상품</span>
       </h2>
-      <div class="content-body content-slide swiper-container">
+      <div class="content-body content-slide2 swiper-container">
         <ul class="content-slide-list swiper-wrapper">
           <li class="content-slide-item swiper-slide">
             <div class="img-wrapper">
@@ -284,7 +318,7 @@
         <div class="video-wrapper">
           <iframe
             class="jansport-video"
-            src="https://www.youtube.com/embed/QrWG7q4Epi8?autoplay=1&mute=1;"
+            src="https://www.youtube.com/embed/QrWG7q4Epi8"
             allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -520,5 +554,6 @@
       </div>
       <!-- /.row-3 -->
     </footer>
+    <!-- /.global-footer -->
   </body>
 </html>

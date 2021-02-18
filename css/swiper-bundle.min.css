@@ -380,7 +380,7 @@ button.swiper-pagination-bullet {
   bottom: 3px;
   z-index: 50;
   height: 5px;
-  width: 98%;
+  width: 100%;
 }
 .swiper-container-vertical > .swiper-scrollbar {
   position: absolute;

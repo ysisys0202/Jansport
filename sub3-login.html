@@ -16,12 +16,11 @@
   <body>
     <header class="global-header">
       <h1 class="header-logo">
-        <a href="./index.html"
-          ><img
-            src="./images/common/header-logo.png"
-            alt="잔스포츠"
-            class="header-iogo-img"
-        /></a>
+        <img
+          src="./images/common/header-logo.png"
+          alt="잔스포츠"
+          class="header-iogo-img"
+        />
       </h1>
       <button class="mobile-nav-button" aria-label="모바일 네비게이션 버튼">
         <i class="fas fa-bars"></i>
@@ -48,8 +47,15 @@
           </li>
         </ul>
         <ul class="sub-nav">
-          <li class="sub-nav-item">
-            <a href="#"><i class="fas fa-search"></i><span>Search</span></a>
+          <li class="sub-nav-item search-item">
+            <form class="search-form" action="#" method="GET">
+              <div class="serach-input-wrapper">
+                <input class="search-input" type="text" />
+              </div>
+              <button type="submit" class="search-submit-button">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
           </li>
           <li class="sub-nav-item">
             <a href="./sub3-login.html"
@@ -63,9 +69,10 @@
           </li>
         </ul>
       </nav>
+      <div class="nav-overlay"></div>
     </header>
     <!-- /.global-header -->
-    <section class="page-pagination">
+    <section class="page-pagination grid-width">
       <h2 class="page-route" aria-label="페이지 경로">
         <span class="root-page" aria-label="상위 페이지">
           <a href="./index.html">Home</a>
@@ -91,7 +98,7 @@
               />
               <label class="id-save-label" for="idSave"> 아이디 저장 </label>
             </div>
-            <!-- .id-form -->
+            <!-- /.id-form -->
           </div>
           <div class="form-group password">
             <input
@@ -105,6 +112,7 @@
         </form>
       </div>
     </section>
+    <!--/section.login  -->
     <section class="content sign-up">
       <h2 class="content-title sr-only">회원가입</h2>
       <div class="content-body grid-width">

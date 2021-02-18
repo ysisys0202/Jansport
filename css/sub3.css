@@ -1,15 +1,17 @@
+@charset "UTF-8";
 .content-title {
-  display: block;
   text-align: center; }
 
 .button {
+  display: block;
   width: 180px;
   height: 50px;
   background-color: #4f98b0;
   border-radius: 10px;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 2.22;
+  text-align: center;
   color: #efefef; }
 
 /*login*/
@@ -24,11 +26,12 @@
     display: flex;
     justify-content: space-between; }
   .login input {
-    width: 400px;
+    width: 65%;
     height: 50px;
     padding: 20px;
     border: 1px solid #efefef;
-    border-radius: 10px; }
+    border-radius: 10px;
+    font-size: 16px; }
   .login input::placeholder {
     font-size: 16px; }
   .login .checkbox-wrapper {
@@ -55,8 +58,44 @@
     margin-right: 40px;
     color: #77777a; }
   .sign-up a {
-    text-align: center;
     line-height: 50px;
-    font-weight: 400;
     color: #232323;
     background-color: #efefef; }
+
+/*media queries*/
+/*1320px 이하*/
+@media screen and (max-width: 1320px) {
+  /*login*/
+  .login .login-form {
+    /*80px / 1320px * 100*/
+    padding-bottom: 6.06%; }
+  /*sign-up*/
+  .sign-up .content-body {
+    /*80px / 1320px * 100*/
+    margin-top: 6.06%; } }
+
+/*1024px 이하*/
+@media screen and (max-width: 1024px) {
+  /*login*/
+  .login .login-form {
+    /*80px / 1024px * 100*/
+    padding-bottom: 7.81%; }
+  /*sign-up*/
+  .sign-up .content-body {
+    /*80px / 1024px * 100*/
+    margin-top: 7.81; } }
+
+/*768px 이하*/
+@media screen and (max-width: 768px) {
+  .button {
+    width: 140px; }
+  /*.login*/
+  .login .login-form {
+    width: 100%; }
+  /*.sign-up*/
+  .sign-up .content-body {
+    display: block; }
+  .sign-up p {
+    text-align: center; }
+  .sign-up .button {
+    margin: 10px auto 0; } }

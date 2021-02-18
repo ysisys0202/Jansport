@@ -12,7 +12,7 @@ $color-grey-05: #ebebeb;
 // font-size
 @mixin font-default {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 400;
   line-height: 30px;
   color: $color-black;
@@ -33,7 +33,7 @@ $color-grey-05: #ebebeb;
   font-weight: $fw;
   line-height: $lh;
 }
-@mixin font-md($fz: 1.8rem, $fw: 500, $lh: 2.22) {
+@mixin font-md($fz: 18px, $fw: 500, $lh: 2.22) {
   font-size: $fz;
   font-weight: $fw;
   line-height: $lh;
