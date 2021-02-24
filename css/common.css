@@ -100,18 +100,14 @@ body {
   border-bottom: 1px solid #efefef;
   background-color: #ffffff;
   width: 100%;
-  height: 80px; }
+  height: 80px;
+  /*mobile-nav*/ }
   .global-header .header-logo {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer; }
-  .global-header .mobile-nav-button {
-    display: none;
-    font-size: 30px;
-    color: #77777a;
-    line-height: 80px; }
   .global-header .global-nav {
     display: flex;
     justify-content: space-between; }
@@ -218,12 +214,78 @@ body {
     color: #77777a;
     font-size: 14px; }
   .global-header .mobile-nav {
-    position: fixed;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    color: #77777a; }
+  .global-header .mobile-nav-button {
+    padding-left: 3%; }
+  .global-header .mobile-utill {
+    display: flex;
+    padding: 3%; }
+  .global-header .mobile-utill-item {
+    margin-left: 10px; }
+  .global-header .mobile-menu {
+    position: absolute;
     top: 80px;
-    z-index: 20;
-    padding: 30px;
-    width: 90%;
-    background-color: #fff; }
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: 0.5s; }
+  .global-header .mobile-menu.show {
+    transform: translateX(0); }
+  .global-header .mobile-menu-list {
+    position: relative;
+    display: flex; }
+  .global-header .mobile-menu-item {
+    width: 50%;
+    text-align: center;
+    border: 1px solid #ebebeb; }
+  .global-header .mobile-menu-item.clicked {
+    color: #fff;
+    background-color: #4f98b0;
+    border-bottom: 1px solid #fff; }
+  .global-header .mobile-menu-item:nth-of-type(2) {
+    margin-left: -1px;
+    width: calc(50% + 1px); }
+  .global-header .mobile-subclass-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    color: #77777a;
+    text-align-last: left; }
+  .global-header .clicked .mobile-subclass-menu {
+    display: block; }
+  .global-header .mobile-subclass-menu-item {
+    padding-left: 3%;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 12px; }
+  .global-header .mobile-subclass-menu-item .first {
+    font-weight: 500;
+    color: #232323; }
+  .global-header .mobile-search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    margin-top: 250px;
+    padding-left: 3%; }
+  .global-header .mobile-search-input {
+    height: 30px;
+    border: 1px solid #ebebeb;
+    border-radius: 20px; }
+  .global-header .mobile-search-input::placeholder {
+    text-align: center; }
+  .global-header .mobile-search-button {
+    width: 30px;
+    line-height: 30px; }
 
 /*page-pagination*/
 .page-pagination {
@@ -278,9 +340,11 @@ body {
   .global-footer .discover-more {
     margin-left: 40px; }
   .global-footer .company-info {
-    margin-top: 40px; }
+    margin-top: 40px;
+    text-align: center; }
     .global-footer .company-info .company-info-list {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap; }
       .global-footer .company-info .company-info-list:first-of-type ~ .company-info-list {
         margin-top: 20px; }
@@ -316,7 +380,7 @@ body {
   /*global-header*/
   .global-header .mobile-nav-button {
     display: block; }
-  .global-header .main-nav {
+  .global-header .global-nav {
     display: none; }
   .global-header .active .dropdown-nav-list {
     height: 100%; }
@@ -325,6 +389,14 @@ body {
     top: 0;
     right: 0; }
   .global-header .sub-nav-item span {
+    display: none; }
+  .global-header .mobile-nav {
+    display: flex; }
+  /*global-footer*/
+  .global-footer .row-1 {
+    justify-content: center;
+    text-align: center; }
+  .global-footer .col-2 {
     display: none; } }
 
 /*768px 이하*/
@@ -352,4 +424,7 @@ body {
     /*160px / 1320px * 100*/
     padding: 20.83% 0; }
     .content .content-header {
-      text-align: center; } }
+      text-align: center; }
+  /*global-footer*/
+  .global-footer {
+    font-size: 8px; } }

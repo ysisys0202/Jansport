@@ -16,15 +16,14 @@
   <body>
     <header class="global-header">
       <h1 class="header-logo">
-        <img
-          src="./images/common/header-logo.png"
-          alt="잔스포츠"
-          class="header-iogo-img"
-        />
+        <a href="./index.html">
+          <img
+            src="./images/common/header-logo.png"
+            alt="잔스포츠"
+            class="header-iogo-img"
+          />
+        </a>
       </h1>
-      <button class="mobile-nav-button" aria-label="모바일 네비게이션 버튼">
-        <i class="fas fa-bars"></i>
-      </button>
       <nav class="global-nav">
         <h2 class="sr-only">대메뉴</h2>
         <ul class="main-nav">
@@ -70,6 +69,76 @@
         </ul>
       </nav>
       <div class="nav-overlay"></div>
+      <!-- /global-nav -->
+      <nav class="mobile-nav">
+        <h2 class="sr-only">모바일 네비게이션</h2>
+        <button
+          class="mobile-nav-button nav-active-button"
+          aria-label="모바일 네비게이션 버튼"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="mobile-utill">
+          <li class="mobile-utill-item" aria-label="로그인">
+            <i class="fas fa-user-alt"></i>
+          </li>
+          <li class="mobile-utill-item" aria-label="장바구니">
+            <i class="fas fa-shopping-cart"></i>
+          </li>
+        </ul>
+        <div class="mobile-menu">
+          <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+              <h3 class="mobile-menu-item-title">Shop</h3>
+              <ul class="mobile-subclass-menu">
+                <li class="mobile-subclass-menu-item first">
+                  <a href="#">Shop</a>
+                </li>
+                <li class="mobile-subclass-menu-item">
+                  <a href="#">ALL PROCUCTS</a>
+                </li>
+                <li class="mobile-subclass-menu-item">
+                  <a href="#">SUPERBREAK</a>
+                </li>
+                <li class="mobile-subclass-menu-item">
+                  <a href="#">BIC STUDENT</a>
+                </li>
+                <li class="mobile-subclass-menu-item">
+                  <a href="#">HISTORY</a>
+                </li>
+                <li class="mobile-subclass-menu-item">
+                  <a href="#">BIC CAMPUS</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile-menu-item">
+              <h3 class="mobile-nav-menu-title">Our Story</h3>
+              <ul class="mobile-subclass-menu">
+                <li class="mobile-subclass-menu-item first">
+                  <a href="#">Our Story</a>
+                </li>
+                <li class="mobile-subclass-menu-item">
+                  <a href="#">히스토리</a>
+                </li>
+                <li class="mobile-subclass-menu-item">
+                  <a href="#">지속가능성</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form action="#" method="GET" class="mobile-search">
+            <input
+              type="text"
+              placeholder="검색어를 입력해주세요"
+              class="mobile-search-input"
+            />
+            <button type="submit">
+              <i class="fas fa-search mobile-search-button"></i>
+            </button>
+          </form>
+        </div>
+        <!-- /mobile-menu -->
+      </nav>
     </header>
     <!-- /.global-header -->
     <section class="page-pagination grid-width">
