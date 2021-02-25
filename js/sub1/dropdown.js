@@ -23,7 +23,7 @@
       styleSelectItems.forEach((styleSelectItem) => {
         styleSelectItem.classList.remove("active");
       });
-      targetItem.classList.add("active");
+      targetItem.classList.toggle("active");
       const currentWrapper = targetItem.querySelector(".subclass-wrapper");
       const currentList = targetItem.querySelector(".subclass-list");
       const currentHeight = currentList.clientHeight;
