@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.content .content-title {
+  text-align: center; }
+
 .content .content-body {
   margin-top: 80px; }
 
@@ -25,9 +28,6 @@
     line-height: 1.667; }
 
 /*style-select*/
-.style-select .content-title {
-  text-align: center; }
-
 .style-select .style-select-list {
   display: flex;
   justify-content: space-around; }
@@ -230,9 +230,9 @@
 
 /*768px 이하*/
 @media screen and (max-width: 768px) {
-  /*style-select*/
-  .style-select .content-sub-title::before {
+  .content-sub-title::before {
     margin: 0 auto; }
+  /*style-select*/
   .style-select .style-select-list {
     justify-content: space-between;
     flex-wrap: wrap; }

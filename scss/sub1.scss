@@ -1,5 +1,8 @@
 @import "./variable.scss";
 .content {
+  .content-title {
+    text-align: center;
+  }
   .content-body {
     margin-top: 80px;
   }
@@ -30,9 +33,6 @@
 }
 /*style-select*/
 .style-select {
-  .content-title {
-    text-align: center;
-  }
   .style-select-list {
     display: flex;
     justify-content: space-around;
@@ -251,11 +251,11 @@
 }
 /*768px 이하*/
 @media screen and (max-width: 768px) {
+  .content-sub-title::before {
+    margin: 0 auto;
+  }
   /*style-select*/
   .style-select {
-    .content-sub-title::before {
-      margin: 0 auto;
-    }
     .style-select-list {
       justify-content: space-between;
       flex-wrap: wrap;
