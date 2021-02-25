@@ -3,7 +3,27 @@
 .main-slide {
   z-index: 1;
   .slide-item {
+    padding-top: 280px;
     height: 800px;
+    color: $color-white-clear;
+    text-align: center;
+  }
+  .slide-item-sub-title {
+    @include font-lg;
+  }
+  .slide-item-title {
+    margin-top: 20px;
+    font-size: 7.2rem;
+    line-height: 1.11;
+    font-weight: 900;
+  }
+  .slide-item-btn {
+    display: block;
+    margin: 60px auto 0;
+    width: 200px;
+    background-color: $color-brand;
+    border-radius: 50px;
+    line-height: 50px;
   }
 }
 /*content*/
@@ -178,12 +198,43 @@
     text-align: center;
   }
 }
+/*images*/
+.slide-item {
+  &.i1 {
+    background-image: url(../images/index/main_slide_image_01.jpg);
+  }
+  &.i2 {
+    background-image: url(../images/index/main_slide_image_02.jpg);
+  }
+  &.i3 {
+    background-image: url(../images/index/main_slide_image_03.jpg);
+  }
+}
+.collaboration {
+  .bg-img01 {
+    background-image: url(../images/index/collaboration_rolarola.jpg);
+  }
+  .bg-img02 {
+    background-image: url(../images/index/collaboration_diseney.jpg);
+  }
+  .bg-img03 {
+    background-image: url(../images/index/collaboration_mark_gonzaless.jpg);
+  }
+}
 /*media queries*/
 @media screen and (max-width: 1024px) {
   /*main-slide*/
   .main-slide {
-    .slide-item {
-      //height: 600px;
+    .slide-item-sub-title {
+      @include font-md;
+    }
+    .slide-item-title {
+      margin-top: 10px;
+      font-size: 4.8rem;
+      line-height: 1.67;
+    }
+    .slide-item-btn {
+      margin-top: 40px;
     }
   }
   /*.collaborattion*/
@@ -219,9 +270,31 @@
       }
     }
   }
+  /*images*/
+  .slide-item {
+    &.i1 {
+      background-image: url(../images/index/main_slide_image_01_max-width-1024px.jpg);
+    }
+    &.i2 {
+      background-image: url(../images/index/main_slide_image_02_max-width-1024px.jpg);
+    }
+    &.i3 {
+      background-image: url(../images/index/main_slide_image_03_max-width-1024px.jpg);
+    }
+  }
 }
 /*768px 이하*/
 @media screen and (max-width: 768px) {
+  /*main-slide*/
+  .main-slide {
+    .slide-item-sub-title {
+      @include font-sm;
+    }
+    .slide-item-title {
+      font-size: 3.6rem;
+      line-height: 2.22;
+    }
+  }
   .banner {
     padding-bottom: 93.75%;
     .banner-body {
@@ -251,28 +324,16 @@
       }
     }
   }
-}
-
-/*images*/
-.slide-item {
-  &.i1 {
-    background-image: url(../images/index/main_slide_image_01.jpg);
-  }
-  &.i2 {
-    background-image: url(../images/index/main_slide_image_02.jpg);
-  }
-  &.i3 {
-    background-image: url(../images/index/main_slide_image_03.jpg);
-  }
-}
-.collaboration {
-  .bg-img01 {
-    background-image: url(../images/index/collaboration_rolarola.jpg);
-  }
-  .bg-img02 {
-    background-image: url(../images/index/collaboration_diseney.jpg);
-  }
-  .bg-img03 {
-    background-image: url(../images/index/collaboration_mark_gonzaless.jpg);
+  /*images*/
+  .slide-item {
+    &.i1 {
+      background-image: url(../images/index/main_slide_image_01_max-width-768px.jpg);
+    }
+    &.i2 {
+      background-image: url(../images/index/main_slide_image_02_max-width-768px.jpg);
+    }
+    &.i3 {
+      background-image: url(../images/index/main_slide_image_03_max-width-768px.jpg);
+    }
   }
 }

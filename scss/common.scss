@@ -56,8 +56,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  text-indent: -9999px;
 }
 .bg {
   background-repeat: no-repeat;
@@ -510,6 +508,12 @@ body {
     padding: 20.83% 0;
     .content-header {
       text-align: center;
+    }
+  }
+  /*global-header*/
+  .global-header {
+    .header-logo-img {
+      height: 30px;
     }
   }
   /*global-footer*/
