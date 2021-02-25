@@ -22,7 +22,7 @@
   }
   .banner-title {
     font-size: 7.2rem;
-    font-weight: 700;
+    font-weight: 900;
     color: $color-white;
     /*lh:120px*/
     line-height: 1.667;
@@ -240,8 +240,13 @@
 /*media queries*/
 /*1024px 이하*/
 @media screen and (max-width: 1024px) {
+  /*banner*/
   .banner {
     padding-bottom: 39%;
+    .banner-title {
+      font-size: 4.8rem;
+      line-height: 2.5;
+    }
   }
 }
 /*768px 이하*/
@@ -260,6 +265,13 @@
     }
     .style-select-item:first-of-type ~ .style-select-item {
       margin-top: 10px;
+    }
+  }
+  /*banner*/
+  .banner {
+    .banner-title {
+      font-size: 3.6rem;
+      line-height: 3.33;
     }
   }
   /*product*/
