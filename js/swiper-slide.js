@@ -15,10 +15,10 @@ window.addEventListener("load", () => {
     },
     loop: false,
     breakpoints: {
-      1024: {
+      1025: {
         slidesPerView: 3,
       },
-      768: {
+      769: {
         slidesPerView: 1,
       },
     },
@@ -31,10 +31,10 @@ window.addEventListener("load", () => {
     loop: true,
 
     breakpoints: {
-      1024: {
+      1025: {
         slidesPerView: 4,
       },
-      768: {
+      769: {
         slidesPerView: 2,
       },
     },
