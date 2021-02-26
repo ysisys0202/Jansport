@@ -2,9 +2,8 @@
 
 {
   const styleSelectList = document.querySelector(".style-select-list");
+  console.log(styleSelectList);
   const styleSelectItems = document.querySelectorAll(".style-select-item");
-  const subclassWrappers = document.querySelectorAll(".subclass-wrapper");
-  const subclassLists = document.querySelectorAll(".subclass-list");
   let targetItem = null;
 
   const findTargetItem = (className) => {
