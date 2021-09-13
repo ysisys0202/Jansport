@@ -1,0 +1,24 @@
+{
+  "name": "10th-jansport",
+  "version": "1.0.0",
+  "description": "청춘, 자유, 도전을 대변해온 브랜드인 잔스포츠의 사이트를 리뉴얼 하였습니다. 기존의 사이트는 메인 배너와 각 제품의 종류를 보여주는 섹션으로 구성된 단순한 구조였습니다. 이러한 단순한 구조를 가져가면서도 다양한 정보를 제공하기 위해 이미지 슬라이드를 적극 활용하였습니다. 또한 브랜드 컨셉 비디오를 풀 화면으로 배치하여 시각적 임팩트를 주었습니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -wr  --source-map true ./scss/ -o ./css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysisys0202/Jansport.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ysisys0202/Jansport/issues"
+  },
+  "homepage": "https://github.com/ysisys0202/Jansport#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
