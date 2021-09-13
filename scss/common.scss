@@ -332,6 +332,9 @@ body {
     width: 30px;
     line-height: 30px;
   }
+  .mobile-nav .linked > a {
+    color: $color-brand;
+  }
 }
 /*page-pagination*/
 .page-pagination {

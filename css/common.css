@@ -280,6 +280,8 @@ body {
   .global-header .mobile-search-button {
     width: 30px;
     line-height: 30px; }
+  .global-header .mobile-nav .linked > a {
+    color: #4f98b0; }
 
 /*page-pagination*/
 .page-pagination {
