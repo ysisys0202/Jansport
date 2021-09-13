@@ -287,12 +287,23 @@
 @media screen and (max-width: 768px) {
   /*main-slide*/
   .main-slide {
+    .slide-item {
+      padding-top: 200px;
+      height: calc(100vh - 80px);
+    }
     .slide-item-sub-title {
       @include font-sm;
     }
     .slide-item-title {
-      font-size: 3.6rem;
-      line-height: 2.22;
+      @include font-xl($lh: 1);
+    }
+    .slide-item-btn {
+      margin-top: 95px;
+      width: 160px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: 81%;
     }
   }
   .banner {
@@ -307,7 +318,7 @@
       @include font-lg($fw: 900);
     }
     p {
-      @include font-md;
+      @include font-xxs;
     }
   }
 
@@ -316,11 +327,11 @@
     article {
       width: calc(50% - 15px);
       &:nth-of-type(2) ~ article {
-        margin-top: 40px;
+        margin-top: 20px;
       }
-      .img-wrapper {
-        /*330px /360px *100*/
-        //width: 91.67%;
+      .segment-title {
+        @include font-xxs($lh: 1.1667);
+        margin-top: 5px;
       }
     }
   }

@@ -33,9 +33,6 @@ body {
     background-color: $color-brand;
   }
 }
-.segment-title {
-  @include font-lg($lh: 3.33);
-}
 /*sr-only*/
 .sr-only {
   position: absolute;
@@ -485,13 +482,13 @@ body {
 @media screen and (max-width: 768px) {
   /*font*/
   .content-title {
-    font-size: 3.4rem;
+    @include font-lg($fw: 700);
   }
   .content-sub-title {
     display: block;
     position: static;
     margin: 0;
-    @include font-md($lh: 2.22);
+    @include font-sm($lh: 1);
     &::before {
       content: "";
       display: block;
@@ -501,6 +498,9 @@ body {
       width: 30px;
       height: 5px;
     }
+  }
+  .segment-title {
+    @include font-sm;
   }
   /*layout*/
   .content {
@@ -519,5 +519,24 @@ body {
   /*global-footer*/
   .global-footer {
     font-size: 8px;
+    .company-info {
+      text-align: left;
+      .company-info-list {
+        display: block;
+      }
+      .company-info-wrapper {
+        display: block;
+        &::after {
+          content: "";
+        }
+        dt,
+        dd {
+          display: inline;
+        }
+        dd {
+          font-weight: 400;
+        }
+      }
+    }
   }
 }

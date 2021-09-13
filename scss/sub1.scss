@@ -24,11 +24,8 @@
     background-image: url(../images/sub1/images/banner-all-product_01.jpg);
   }
   .banner-title {
-    font-size: 7.2rem;
-    font-weight: 900;
+    @include font-xxl;
     color: $color-white;
-    /*lh:120px*/
-    line-height: 1.667;
   }
 }
 /*style-select*/
@@ -252,7 +249,7 @@
 /*768px 이하*/
 @media screen and (max-width: 768px) {
   .content-sub-title::before {
-    margin: 0 auto;
+    margin: 0 auto 10px;
   }
   /*style-select*/
   .style-select {
@@ -270,8 +267,7 @@
   /*banner*/
   .banner {
     .banner-title {
-      font-size: 3.6rem;
-      line-height: 3.33;
+      @include font-lg;
     }
   }
   /*product*/
@@ -285,8 +281,21 @@
     .product-item:nth-of-type(2) ~ .product-item {
       margin-top: 20px;
     }
+    .segment-title {
+      @include font-xs($lh: 1.2);
+    }
     .product-number {
       display: block;
+    }
+    .product-prev-price,
+    .product-current-price {
+      @include font-xxs;
+    }
+    .pagination-item {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 12px;
     }
   }
 }

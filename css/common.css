@@ -37,11 +37,6 @@ body {
     height: 30px;
     background-color: #4f98b0; }
 
-.segment-title {
-  font-size: 2.4rem;
-  font-weight: 500;
-  line-height: 3.33; }
-
 /*sr-only*/
 .sr-only {
   position: absolute;
@@ -402,14 +397,16 @@ body {
 @media screen and (max-width: 768px) {
   /*font*/
   .content-title {
-    font-size: 3.4rem; }
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.667; }
   .content-sub-title {
     display: block;
     position: static;
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 2.22; }
+    line-height: 1; }
     .content-sub-title::before {
       content: "";
       display: block;
@@ -418,6 +415,10 @@ body {
       margin-bottom: 10px;
       width: 30px;
       height: 5px; }
+  .segment-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.875; }
   /*layout*/
   .content {
     /*160px / 1320px * 100*/
@@ -429,4 +430,19 @@ body {
     height: 30px; }
   /*global-footer*/
   .global-footer {
-    font-size: 8px; } }
+    font-size: 8px; }
+    .global-footer .company-info {
+      text-align: left; }
+      .global-footer .company-info .company-info-list {
+        display: block; }
+      .global-footer .company-info .company-info-wrapper {
+        display: block; }
+        .global-footer .company-info .company-info-wrapper::after {
+          content: ""; }
+        .global-footer .company-info .company-info-wrapper dt,
+        .global-footer .company-info .company-info-wrapper dd {
+          display: inline; }
+        .global-footer .company-info .company-info-wrapper dd {
+          font-weight: 400; } }
+
+/*# sourceMappingURL=common.css.map */
